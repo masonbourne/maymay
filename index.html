@@ -1,272 +1,230 @@
-diff --git a/index.html b/index.html
-index 81330990226c9c2f90296a5bc111fbbb41ab6bff..99041747c835d033e894d518d497fe2612c2b548 100644
---- a/index.html
-+++ b/index.html
-@@ -1,41 +1,229 @@
- <!DOCTYPE html>
- <html lang="en">
--<head>
--    <meta charset="UTF-8">
--    <meta http-equiv="X-UA-Compatible" content="IE=edge">
--    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-+  <head>
-+    <meta charset="UTF-8" />
-+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-+    <meta
-+      name="description"
-+      content="MayMay official artist website featuring music, tour dates, merch, and community chat."
-+    />
-+    <title>MayMay | Official Artist Site</title>
- 
--    <title>maymay</title>
--
--    <!--Link to other files-->
--    <link rel="stylesheet" href="style.css">
-+    <link rel="preconnect" href="https://fonts.googleapis.com" />
-+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-+    <link
-+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
-+      rel="stylesheet"
-+    />
-+    <link
-+      rel="stylesheet"
-+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-+      integrity="sha512-dBwexv5Q8bVY9ofuUBev5nYeD1yfknhk+aoCA8DmFumiQJ5AZtZR9OEtpJR/YWZLxE+nobVhtSGcVwqDAVBBusA=="
-+      crossorigin="anonymous"
-+      referrerpolicy="no-referrer"
-+    />
-+    <link rel="stylesheet" href="style.css" />
-     <script src="script.js" defer></script>
--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
--
--</head>
--<body>
--    <!--Navbar-->    
--    <div class="container">
--        <div class="navbar">
--            <a href="index.html"><img src="images/heart.JPG" class="logo"></a>
--            <nav>
--                <ul id="menuList">
--                    <li><a href="about.html">ABOUT</a></li>
--                    <li><a href="music.html">MUSIC</a></li>
--                    <li><a href="support.html">SUPPORT</a></li>
--                    <li><a href="contact.html">CONTACT</a></li>
--                </ul>
--            </nav>
--            <!--Menu Icon-->
--            <i class="fa fa-align-justify" id="menu-icon"></i>
--        </div>
--    </div>
--
--    <h1>Home</h1>
--    
--    <img src="images/grace.jpg" id="grace">
--
--    <p>Maymay.</p>
--
--</body>
--</html>
-\ No newline at end of file
-+  </head>
-+  <body>
-+    <header class="top-nav" id="home">
-+      <a class="brand" href="#home" aria-label="Go to top">MAYMAY</a>
-+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-+        <span></span><span></span><span></span>
-+      </button>
-+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
-+        <a href="#home" class="nav-link active">Home</a>
-+        <a href="#music" class="nav-link">Music</a>
-+        <a href="#about" class="nav-link">About</a>
-+        <a href="#tour" class="nav-link">Tour</a>
-+        <a href="#merch" class="nav-link">Merch</a>
-+        <a href="#contact" class="nav-link">Contact</a>
-+        <a href="#chat" class="nav-link">Chat</a>
-+      </nav>
-+    </header>
-+
-+    <main>
-+      <section class="hero section" aria-label="Home hero">
-+        <div class="hero-overlay"></div>
-+        <div class="hero-content reveal">
-+          <p class="eyebrow">Official Artist Site</p>
-+          <h1>MAYMAY</h1>
-+          <p class="hero-subtitle">Immersive soul, midnight textures, and stories that move.</p>
-+          <div class="hero-actions">
-+            <a href="#music" class="btn btn-primary">Play Latest</a>
-+            <a href="#tour" class="btn btn-secondary">View Tour Dates</a>
-+          </div>
-+        </div>
-+        <a class="scroll-cue" href="#music" aria-label="Scroll to music section">
-+          <span></span>
-+          <small>Scroll</small>
-+        </a>
-+      </section>
-+
-+      <section class="section panel reveal" id="music" aria-labelledby="music-heading">
-+        <div class="section-header">
-+          <p class="eyebrow">Listen</p>
-+          <h2 id="music-heading">Music</h2>
-+        </div>
-+        <p class="section-text">Stream MayMay directly from Spotify and follow to stay in sync with every release.</p>
-+        <div class="music-grid">
-+          <div class="card">
-+            <h3>Artist Player</h3>
-+            <iframe
-+              title="Spotify artist player"
-+              src="https://open.spotify.com/embed/artist/1PgcPgR8K1xWRvCC6U1mH0?utm_source=generator&theme=0"
-+              width="100%"
-+              height="352"
-+              frameborder="0"
-+              allowfullscreen=""
-+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-+              loading="lazy"
-+            ></iframe>
-+          </div>
-+          <div class="card">
-+            <h3>Follow on Spotify</h3>
-+            <iframe
-+              title="Follow on Spotify"
-+              src="https://open.spotify.com/follow/1/?uri=spotify:artist:1PgcPgR8K1xWRvCC6U1mH0&size=detail&theme=dark"
-+              width="100%"
-+              height="66"
-+              scrolling="no"
-+              frameborder="0"
-+              style="border:none;overflow:hidden"
-+              loading="lazy"
-+            ></iframe>
-+            <p>Tap follow so new tracks land in your feed right away.</p>
-+            <a class="btn btn-primary" target="_blank" rel="noopener" href="https://open.spotify.com/artist/1PgcPgR8K1xWRvCC6U1mH0">Open Artist Profile</a>
-+          </div>
-+        </div>
-+      </section>
-+
-+      <section class="section panel reveal" id="about" aria-labelledby="about-heading">
-+        <div class="section-header">
-+          <p class="eyebrow">Story</p>
-+          <h2 id="about-heading">About</h2>
-+        </div>
-+        <div class="about-grid">
-+          <img src="images/mason.jpg" alt="Portrait of MayMay" class="about-image" />
-+          <div>
-+            <p class="section-text">
-+              MayMay is an independent artist blending atmospheric R&B, dream-pop textures, and vulnerable lyricism.
-+              Every release is crafted to feel cinematic, intimate, and lived-in.
-+            </p>
-+            <p class="section-text">
-+              From studio sessions to late-night writing rooms, this project is built on authenticity and emotional
-+              storytelling. The mission: connect deeply, move freely, and create music that lingers.
-+            </p>
-+          </div>
-+        </div>
-+      </section>
-+
-+      <section class="section panel reveal" id="tour" aria-labelledby="tour-heading">
-+        <div class="section-header">
-+          <p class="eyebrow">Live</p>
-+          <h2 id="tour-heading">Tour & Events</h2>
-+        </div>
-+        <div class="event-list">
-+          <article class="event-card">
-+            <p class="event-date">MAR 21, 2026</p>
-+            <h3>Midnight Rooms</h3>
-+            <p>Los Angeles, CA — The Echo</p>
-+            <a href="#contact" class="text-link">Get Tickets</a>
-+          </article>
-+          <article class="event-card">
-+            <p class="event-date">APR 05, 2026</p>
-+            <h3>After Hours Showcase</h3>
-+            <p>New York, NY — Baby's All Right</p>
-+            <a href="#contact" class="text-link">Join Waitlist</a>
-+          </article>
-+          <article class="event-card">
-+            <p class="event-date">MAY 18, 2026</p>
-+            <h3>Summer Nights Festival</h3>
-+            <p>Chicago, IL — Lakefront Stage</p>
-+            <a href="#contact" class="text-link">Tickets Soon</a>
-+          </article>
-+        </div>
-+      </section>
-+
-+      <section class="section panel reveal" id="merch" aria-labelledby="merch-heading">
-+        <div class="section-header">
-+          <p class="eyebrow">Shop</p>
-+          <h2 id="merch-heading">Merch</h2>
-+        </div>
-+        <div class="merch-grid">
-+          <article class="merch-card">
-+            <img src="images/grace.jpg" alt="MayMay signature hoodie" />
-+            <h3>Signature Hoodie</h3>
-+            <p>$58.00</p>
-+            <button class="btn btn-secondary" type="button">Buy Now</button>
-+          </article>
-+          <article class="merch-card">
-+            <img src="images/smile.jpg" alt="Tour tee product" />
-+            <h3>Night Drive Tee</h3>
-+            <p>$34.00</p>
-+            <button class="btn btn-secondary" type="button">Buy Now</button>
-+          </article>
-+          <article class="merch-card">
-+            <img src="images/faith.JPG" alt="Collector vinyl" />
-+            <h3>Limited Vinyl</h3>
-+            <p>$45.00</p>
-+            <button class="btn btn-secondary" type="button">Buy Now</button>
-+          </article>
-+        </div>
-+      </section>
-+
-+      <section class="section panel reveal" id="contact" aria-labelledby="contact-heading">
-+        <div class="section-header">
-+          <p class="eyebrow">Connect</p>
-+          <h2 id="contact-heading">Contact</h2>
-+        </div>
-+        <div class="contact-grid">
-+          <div>
-+            <p class="section-text">For bookings, press, and collaborations, reach out through the form.</p>
-+            <p class="section-text"><strong>Email:</strong> hello@maymaymusic.com</p>
-+          </div>
-+          <form class="contact-form">
-+            <label>
-+              Name
-+              <input type="text" name="name" placeholder="Your name" required />
-+            </label>
-+            <label>
-+              Email
-+              <input type="email" name="email" placeholder="you@example.com" required />
-+            </label>
-+            <label>
-+              Message
-+              <textarea name="message" rows="4" placeholder="Tell me about your project" required></textarea>
-+            </label>
-+            <button type="submit" class="btn btn-primary">Send Message</button>
-+          </form>
-+        </div>
-+      </section>
-+
-+      <section class="section panel reveal" id="chat" aria-labelledby="chat-heading">
-+        <div class="section-header">
-+          <p class="eyebrow">Community</p>
-+          <h2 id="chat-heading">Community Chat</h2>
-+        </div>
-+        <div class="chat-shell" aria-live="polite">
-+          <div class="chat-messages" id="chat-messages"></div>
-+          <form class="chat-form" id="chat-form">
-+            <input id="chat-name" type="text" placeholder="Display name" maxlength="24" required />
-+            <input id="chat-input" type="text" placeholder="Send a message..." maxlength="220" required />
-+            <button class="btn btn-primary" type="submit">Post</button>
-+          </form>
-+        </div>
-+      </section>
-+    </main>
-+
-+    <footer class="footer">
-+      <p>© <span id="year"></span> MAYMAY. All rights reserved.</p>
-+      <div class="socials">
-+        <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-+        <a href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-+        <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-+        <a href="https://open.spotify.com/artist/1PgcPgR8K1xWRvCC6U1mH0" target="_blank" rel="noopener" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
-+      </div>
-+    </footer>
-+  </body>
-+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MayMay official artist website featuring music, tour dates, merch, and community chat."
+    />
+    <title>MayMay | Official Artist Site</title>
+
+       <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-dBwexv5Q8bVY9ofuUBev5nYeD1yfknhk+aoCA8DmFumiQJ5AZtZR9OEtpJR/YWZLxE+nobVhtSGcVwqDAVBBusA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+   </head>
+  <body>
+    <header class="top-nav" id="home">
+      <a class="brand" href="#home" aria-label="Go to top">MAYMAY</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#music" class="nav-link">Music</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#tour" class="nav-link">Tour</a>
+        <a href="#merch" class="nav-link">Merch</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#chat" class="nav-link">Chat</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" aria-label="Home hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">Official Artist Site</p>
+          <h1>MAYMAY</h1>
+          <p class="hero-subtitle">Immersive soul, midnight textures, and stories that move.</p>
+          <div class="hero-actions">
+            <a href="#music" class="btn btn-primary">Play Latest</a>
+            <a href="#tour" class="btn btn-secondary">View Tour Dates</a>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#music" aria-label="Scroll to music section">
+          <span></span>
+          <small>Scroll</small>
+        </a>
+      </section>
+
+      <section class="section panel reveal" id="music" aria-labelledby="music-heading">
+        <div class="section-header">
+          <p class="eyebrow">Listen</p>
+          <h2 id="music-heading">Music</h2>
+        </div>
+        <p class="section-text">Stream MayMay directly from Spotify and follow to stay in sync with every release.</p>
+        <div class="music-grid">
+          <div class="card">
+            <h3>Artist Player</h3>
+            <iframe
+              title="Spotify artist player"
+              src="https://open.spotify.com/embed/artist/1PgcPgR8K1xWRvCC6U1mH0?utm_source=generator&theme=0"
+              width="100%"
+              height="352"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="card">
+            <h3>Follow on Spotify</h3>
+            <iframe
+              title="Follow on Spotify"
+              src="https://open.spotify.com/follow/1/?uri=spotify:artist:1PgcPgR8K1xWRvCC6U1mH0&size=detail&theme=dark"
+              width="100%"
+              height="66"
+              scrolling="no"
+              frameborder="0"
+              style="border:none;overflow:hidden"
+              loading="lazy"
+            ></iframe>
+            <p>Tap follow so new tracks land in your feed right away.</p>
+            <a class="btn btn-primary" target="_blank" rel="noopener" href="https://open.spotify.com/artist/1PgcPgR8K1xWRvCC6U1mH0">Open Artist Profile</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section panel reveal" id="about" aria-labelledby="about-heading">
+        <div class="section-header">
+          <p class="eyebrow">Story</p>
+          <h2 id="about-heading">About</h2>
+        </div>
+        <div class="about-grid">
+          <img src="images/mason.jpg" alt="Portrait of MayMay" class="about-image" />
+          <div>
+            <p class="section-text">
+              MayMay is an independent artist blending atmospheric R&B, dream-pop textures, and vulnerable lyricism.
+              Every release is crafted to feel cinematic, intimate, and lived-in.
+            </p>
+            <p class="section-text">
+              From studio sessions to late-night writing rooms, this project is built on authenticity and emotional
+              storytelling. The mission: connect deeply, move freely, and create music that lingers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section panel reveal" id="tour" aria-labelledby="tour-heading">
+        <div class="section-header">
+          <p class="eyebrow">Live</p>
+          <h2 id="tour-heading">Tour & Events</h2>
+        </div>
+        <div class="event-list">
+          <article class="event-card">
+            <p class="event-date">MAR 21, 2026</p>
+            <h3>Midnight Rooms</h3>
+            <p>Los Angeles, CA — The Echo</p>
+            <a href="#contact" class="text-link">Get Tickets</a>
+          </article>
+          <article class="event-card">
+            <p class="event-date">APR 05, 2026</p>
+            <h3>After Hours Showcase</h3>
+            <p>New York, NY — Baby's All Right</p>
+            <a href="#contact" class="text-link">Join Waitlist</a>
+          </article>
+          <article class="event-card">
+            <p class="event-date">MAY 18, 2026</p>
+            <h3>Summer Nights Festival</h3>
+            <p>Chicago, IL — Lakefront Stage</p>
+            <a href="#contact" class="text-link">Tickets Soon</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section panel reveal" id="merch" aria-labelledby="merch-heading">
+        <div class="section-header">
+          <p class="eyebrow">Shop</p>
+          <h2 id="merch-heading">Merch</h2>
+        </div>
+        <div class="merch-grid">
+          <article class="merch-card">
+            <img src="images/grace.jpg" alt="MayMay signature hoodie" />
+            <h3>Signature Hoodie</h3>
+            <p>$58.00</p>
+            <button class="btn btn-secondary" type="button">Buy Now</button>
+          </article>
+          <article class="merch-card">
+            <img src="images/smile.jpg" alt="Tour tee product" />
+            <h3>Night Drive Tee</h3>
+            <p>$34.00</p>
+            <button class="btn btn-secondary" type="button">Buy Now</button>
+          </article>
+          <article class="merch-card">
+            <img src="images/faith.JPG" alt="Collector vinyl" />
+            <h3>Limited Vinyl</h3>
+            <p>$45.00</p>
+            <button class="btn btn-secondary" type="button">Buy Now</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section panel reveal" id="contact" aria-labelledby="contact-heading">
+        <div class="section-header">
+          <p class="eyebrow">Connect</p>
+          <h2 id="contact-heading">Contact</h2>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <p class="section-text">For bookings, press, and collaborations, reach out through the form.</p>
+            <p class="section-text"><strong>Email:</strong> hello@maymaymusic.com</p>
+          </div>
+          <form class="contact-form">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" placeholder="Tell me about your project" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section panel reveal" id="chat" aria-labelledby="chat-heading">
+        <div class="section-header">
+          <p class="eyebrow">Community</p>
+          <h2 id="chat-heading">Community Chat</h2>
+        </div>
+        <div class="chat-shell" aria-live="polite">
+          <div class="chat-messages" id="chat-messages"></div>
+          <form class="chat-form" id="chat-form">
+            <input id="chat-name" type="text" placeholder="Display name" maxlength="24" required />
+            <input id="chat-input" type="text" placeholder="Send a message..." maxlength="220" required />
+            <button class="btn btn-primary" type="submit">Post</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> MAYMAY. All rights reserved.</p>
+      <div class="socials">
+        <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://open.spotify.com/artist/1PgcPgR8K1xWRvCC6U1mH0" target="_blank" rel="noopener" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
+      </div>
+    </footer>
+  </body>
+</html>
