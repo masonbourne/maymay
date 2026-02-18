@@ -10,7 +10,7 @@ if (menuToggle && navLinks) {
     menuToggle.setAttribute('aria-expanded', String(isOpen));
   });
 
-navItems.forEach((item) => {
+  navItems.forEach((item) => {
     item.addEventListener('click', () => {
       navLinks.classList.remove('open');
       menuToggle.setAttribute('aria-expanded', 'false');
